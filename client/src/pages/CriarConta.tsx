@@ -83,7 +83,7 @@ const PLANS = [
   {
     id: "basic" as const,
     name: "Basic",
-    price: "US$ 248",
+    price: "US$ 118",
     period: "/mês",
     description: "Pare de perder clientes e responda na hora — sem precisar mexer em tecnologia",
     features: ["Respostas automáticas 24h", "WhatsApp e SMS em um só lugar", "Follow-up automático", "Agenda automática", "Publicação nas mídias sociais"],
@@ -95,7 +95,7 @@ const PLANS = [
   {
     id: "business" as const,
     name: "Business",
-    price: "US$ 748",
+    price: "US$ 248",
     period: "/mês",
     description: "Organize, automatize e escale seus clientes — sem perder oportunidades",
     features: ["Tudo do Basic", "Até 5 números de WhatsApp", "Pipeline de vendas completo", "Chamadas de vídeo", "Múltiplos usuários"],
@@ -563,7 +563,7 @@ export default function CriarConta() {
                     </div>
                     <div className="flex justify-between text-sm">
                       <span className="text-white/50">Valor mensal</span>
-                      <span className="text-white font-medium">{selectedPlan === "basic" ? "US$ 248" : "US$ 748"}/mês</span>
+                      <span className="text-white font-medium">{selectedPlan === "basic" ? "US$ 118" : "US$ 248"}/mês</span>
                     </div>
                     <div className="flex justify-between text-sm">
                       <span className="text-white/50">Trial gratuito</span>

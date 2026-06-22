@@ -17,9 +17,9 @@ const PLANS = [
     id: "basic" as const,
     name: "Basic",
     tagline: "Pare de perder clientes e responda na hora — sem precisar mexer em tecnologia.",
-    price: 248,
-    setupFee: 347,
-    yearlyPrice: Math.round(248 * 12 * 0.8),
+    price: 118,
+    setupFee: 120,
+    yearlyPrice: Math.round(118 * 12 * 0.8),
     highlighted: false,
     contactSales: false,
     badge: null as string | null,
@@ -48,9 +48,9 @@ const PLANS = [
     id: "business" as const,
     name: "Business",
     tagline: "Um sistema completo para organizar, automatizar e escalar seus clientes — sem perder oportunidades.",
-    price: 748,
-    setupFee: 748,
-    yearlyPrice: Math.round(748 * 12 * 0.8),
+    price: 248,
+    setupFee: 250,
+    yearlyPrice: Math.round(248 * 12 * 0.8),
     highlighted: true,
     contactSales: false,
     badge: "Mais completo" as string | null,
@@ -451,7 +451,7 @@ export default function Pricing() {
               onClick={() => handleSelectPlan("basic")}
               className="bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-600 hover:to-red-700 text-white font-semibold px-8"
             >
-              Começar com Starter — US$ 118/mês
+              Começar com Basic — US$ 118/mês
             </Button>
             <Button
               variant="outline"

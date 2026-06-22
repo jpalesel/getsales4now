@@ -282,7 +282,7 @@ function PaymentRequiredScreen({ plan, onGoToCheckout }: { plan?: string; onGoTo
           Ir para o checkout — 14 dias grátis
         </Button>
         <p className="text-white/30 text-xs">
-          Plano {plan === "business" ? "Business — US$ 398/mês" : "Starter — US$ 118/mês"} após o trial
+          Plano {plan === "business" ? "Business — US$ 248/mês" : "Basic — US$ 118/mês"} após o trial
         </p>
       </div>
     </div>

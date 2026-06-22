@@ -30,7 +30,7 @@ const PLAN_DETAILS: Record<PlanKey, {
 }> = {
   basic: {
     name: "Basic",
-    price: "US$ 248",
+    price: "US$ 118",
     period: "/mês",
     icon: Zap,
     color: "text-orange-400",
@@ -48,7 +48,7 @@ const PLAN_DETAILS: Record<PlanKey, {
   },
   business: {
     name: "Business",
-    price: "US$ 748",
+    price: "US$ 248",
     period: "/mês",
     icon: Building2,
     color: "text-red-400",

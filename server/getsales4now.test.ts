@@ -205,7 +205,7 @@ describe("billing router structure", () => {
     expect(planIds).toContain("business");
   });
 
-  it("Basic plan price is 397", async () => {
+  it("Basic plan price is 118", async () => {
     const ctx: TrpcContext = {
       user: null,
       req: { protocol: "https", headers: {} } as TrpcContext["req"],
@@ -215,10 +215,10 @@ describe("billing router structure", () => {
     const plans = await caller.billing.getPlans();
     const basic = plans.find((p: { id: string }) => p.id === "basic");
     expect(basic).toBeDefined();
-    expect(basic.monthlyPrice).toBe(248);
+    expect(basic.monthlyPrice).toBe(118);
   });
 
-  it("Business plan price is 748", async () => {
+  it("Business plan price is 248", async () => {
     const ctx: TrpcContext = {
       user: null,
       req: { protocol: "https", headers: {} } as TrpcContext["req"],
@@ -228,7 +228,7 @@ describe("billing router structure", () => {
     const plans = await caller.billing.getPlans();
     const business = plans.find((p: { id: string }) => p.id === "business");
     expect(business).toBeDefined();
-    expect(business.monthlyPrice).toBe(748);
+    expect(business.monthlyPrice).toBe(248);
   });
 });
 

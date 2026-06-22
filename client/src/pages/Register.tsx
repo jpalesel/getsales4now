@@ -29,7 +29,7 @@ const PLANS = [
   {
     id: "basic" as const,
     name: "Basic",
-    price: "US$ 397",
+    price: "US$ 118",
     period: "/mês",
     description: "Pare de perder clientes e responda na hora — sem precisar mexer em tecnologia.",
     color: "from-orange-500 to-orange-600",
@@ -48,7 +48,7 @@ const PLANS = [
   {
     id: "business" as const,
     name: "Business",
-    price: "US$ 748",
+    price: "US$ 248",
     period: "/mês",
     description: "Organize, automatize e escale seus clientes — sem perder oportunidades.",
     color: "from-red-500 to-red-600",

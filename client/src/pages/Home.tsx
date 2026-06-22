@@ -17,8 +17,8 @@ const PLANS = [
     id: "basic",
     name: "Basic",
     tagline: "Pare de perder clientes e responda na hora",
-    setupFee: 347,
-    price: 248,
+    setupFee: 120,
+    price: 118,
     highlight: false,
     cta: "Começar com Basic",
     benefits: [
@@ -36,8 +36,8 @@ const PLANS = [
     id: "business",
     name: "Business",
     tagline: "Organize, automatize e escale — sem perder oportunidades",
-    setupFee: 748,
-    price: 748,
+    setupFee: 250,
+    price: 248,
     highlight: true,
     cta: "Começar com Business",
     benefits: [

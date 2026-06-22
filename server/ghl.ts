@@ -442,7 +442,7 @@ export async function getGhlAgencyInfo(token?: string): Promise<{ companyId: str
 }
 
 // ─── Plan Limits ────────────────────────────────────────────────────────────────
-// Plans: free (sem plano), basic ($397/mês), business ($748/mês), corp (sob consulta)
+// Plans: free (sem plano), basic ($118/mês), business ($248/mês), corp (sob consulta)
 export const PLAN_LIMITS = {
   free:     { contacts: 100,  users: 1,  campaigns: 2,  socialPosts: 10, funnels: 1,  aiCredits: 50,   ghlSubAccount: false },
   basic:    { contacts: 5000, users: 3,  campaigns: 15, socialPosts: 60, funnels: 5,  aiCredits: 300,  ghlSubAccount: true },

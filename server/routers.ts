@@ -48,7 +48,7 @@ function getStripe() {
 // Keep a module-level instance for non-test environments
 const stripe = process.env.STRIPE_SECRET_KEY ? new Stripe(process.env.STRIPE_SECRET_KEY, { apiVersion: "2026-03-25.dahlia" }) : null;
 
-// Stripe Price IDs — Basic ($397/mo) and Business ($748/mo)
+// Stripe Price IDs — Basic ($118/mo) and Business ($248/mo)
 const STRIPE_PRICES: Record<string, Record<string, string>> = {
   basic:    { monthly: process.env.STRIPE_PRICE_STARTER_MONTHLY ?? "", yearly: process.env.STRIPE_PRICE_STARTER_YEARLY ?? "" },
   business: { monthly: process.env.STRIPE_PRICE_BUSINESS_MONTHLY ?? "", yearly: process.env.STRIPE_PRICE_BUSINESS_YEARLY ?? "" },
@@ -1005,10 +1005,10 @@ const billingRouter = router({
         id: "basic",
         name: "Basic",
         description: "Pare de perder clientes e responda na hora — sem precisar mexer em tecnologia.",
-        price: { monthly: 248, yearly: Math.round(248 * 12 * 0.8) },
-        monthlyPrice: 248,
-        yearlyPrice: Math.round(248 * 12 * 0.8),
-        setupFee: 347,
+        price: { monthly: 118, yearly: Math.round(118 * 12 * 0.8) },
+        monthlyPrice: 118,
+        yearlyPrice: Math.round(118 * 12 * 0.8),
+        setupFee: 120,
         currency: "USD",
         limits: PLAN_LIMITS.basic,
         features: [
@@ -1031,10 +1031,10 @@ const billingRouter = router({
         id: "business",
         name: "Business",
         description: "Um sistema completo para organizar, automatizar e escalar seus clientes — sem perder oportunidades.",
-        price: { monthly: 748, yearly: Math.round(748 * 12 * 0.8) },
-        monthlyPrice: 748,
-        yearlyPrice: Math.round(748 * 12 * 0.8),
-        setupFee: 748,
+        price: { monthly: 248, yearly: Math.round(248 * 12 * 0.8) },
+        monthlyPrice: 248,
+        yearlyPrice: Math.round(248 * 12 * 0.8),
+        setupFee: 250,
         currency: "USD",
         limits: PLAN_LIMITS.business,
         features: [
@@ -1100,8 +1100,9 @@ const billingRouter = router({
       const origin = (ctx.req.headers.origin as string) || process.env.APP_URL || "https://getsales4now.agency";
       // Real prices in cents
       const planPrices: Record<string, Record<string, number>> = {
-        basic:    { monthly: 24800, yearly: Math.round(248 * 12 * 0.8 * 100) },
-        business: { monthly: 74800, yearly: Math.round(748 * 12 * 0.8 * 100) },
+        starter:  { monthly: 11800, yearly: Math.round(118 * 12 * 0.8 * 100) },
+        basic:    { monthly: 11800, yearly: Math.round(118 * 12 * 0.8 * 100) },
+        business: { monthly: 24800, yearly: Math.round(248 * 12 * 0.8 * 100) },
       };
 
       const sessionParams: Stripe.Checkout.SessionCreateParams = {
