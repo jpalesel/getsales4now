@@ -19,6 +19,7 @@ const PLANS = [
     tagline: "Pare de perder clientes e responda na hora",
     setupFee: 120,
     price: 118,
+    url: "https://getsales4now-cu7el4pz.manus.space/purchase/growth",
     highlight: false,
     cta: "Começar com Basic",
     benefits: [
@@ -38,6 +39,7 @@ const PLANS = [
     tagline: "Organize, automatize e escale — sem perder oportunidades",
     setupFee: 250,
     price: 248,
+    url: "https://getsales4now-cu7el4pz.manus.space/purchase",
     highlight: true,
     cta: "Começar com Business",
     benefits: [
@@ -129,14 +131,14 @@ export default function Home() {
             <a href="#depoimentos" className="hover:text-white transition-colors">Resultados</a>
           </div>
           <div className="flex items-center gap-3">
-            <Link href="/login">
+            <a href="https://app.getsales4now.com/?url=%252Fagency_launchpad" target="_blank" rel="noopener noreferrer">
               <Button variant="ghost" size="sm" className="text-white/70 hover:text-white">Entrar</Button>
-            </Link>
-            <Link href="/criar-conta">
+            </a>
+            <a href="https://getsales4now-cu7el4pz.manus.space/purchase" target="_blank" rel="noopener noreferrer">
               <Button size="sm" className="bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-600 hover:to-red-700 text-white font-semibold shadow-lg shadow-orange-500/20">
                 Começar agora <ArrowRight className="w-4 h-4 ml-1" />
               </Button>
-            </Link>
+            </a>
           </div>
         </div>
       </nav>
@@ -166,14 +168,19 @@ export default function Home() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Link href="/criar-conta?plan=basic">
+            <a href="https://getsales4now-cu7el4pz.manus.space/purchase" target="_blank" rel="noopener noreferrer">
               <Button size="lg" className="w-full sm:w-auto h-14 px-8 bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-600 hover:to-red-700 text-white font-bold text-lg rounded-2xl shadow-2xl shadow-orange-500/30">
                 Quero meu sistema agora <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
-            </Link>
+            </a>
             <a href="#como-funciona">
               <Button size="lg" variant="outline" className="w-full sm:w-auto h-14 px-8 border-white/20 text-white hover:bg-white/5 rounded-2xl text-lg">
                 <Play className="w-5 h-5 mr-2 text-orange-400" /> Ver como funciona
+              </Button>
+            </a>
+            <a href="https://getsales4now-cu7el4pz.manus.space/consultation" target="_blank" rel="noopener noreferrer">
+              <Button size="lg" variant="outline" className="w-full sm:w-auto h-14 px-8 border-white/20 text-white hover:bg-white/5 rounded-2xl text-lg">
+                <Calendar className="w-5 h-5 mr-2 text-orange-400" /> Agende uma consulta
               </Button>
             </a>
           </div>
@@ -310,7 +317,7 @@ export default function Home() {
                     </li>
                   ))}
                 </ul>
-                <Link href={`/criar-conta?plan=${plan.id}`}>
+                <a href={plan.url} target="_blank" rel="noopener noreferrer">
                   <Button className={`w-full h-12 font-bold rounded-xl ${
                     plan.highlight
                       ? "bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-600 hover:to-red-700 text-white shadow-xl shadow-orange-500/30"
@@ -318,7 +325,7 @@ export default function Home() {
                   }`}>
                     {plan.cta} <ChevronRight className="w-4 h-4 ml-1" />
                   </Button>
-                </Link>
+                </a>
               </div>
             ))}
           </div>
@@ -379,16 +386,21 @@ export default function Home() {
             Comece hoje. Nossa equipe configura tudo para você. Em até 48h seu sistema está funcionando — respondendo, agendando e vendendo.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/criar-conta?plan=basic">
+            <a href="https://getsales4now-cu7el4pz.manus.space/purchase" target="_blank" rel="noopener noreferrer">
               <Button size="lg" className="w-full sm:w-auto h-14 px-10 bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-600 hover:to-red-700 text-white font-bold text-lg rounded-2xl shadow-2xl shadow-orange-500/30">
                 Quero começar agora <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
-            </Link>
-            <Link href="/criar-conta?plan=business">
+            </a>
+            <a href="https://getsales4now-cu7el4pz.manus.space/purchase" target="_blank" rel="noopener noreferrer">
               <Button size="lg" variant="outline" className="w-full sm:w-auto h-14 px-10 border-white/20 text-white hover:bg-white/5 rounded-2xl text-lg">
                 Ver plano Business <ChevronRight className="w-5 h-5 ml-1" />
               </Button>
-            </Link>
+            </a>
+            <a href="https://getsales4now-cu7el4pz.manus.space/consultation" target="_blank" rel="noopener noreferrer">
+              <Button size="lg" variant="outline" className="w-full sm:w-auto h-14 px-10 border-white/20 text-white hover:bg-white/5 rounded-2xl text-lg">
+                <Calendar className="w-5 h-5 mr-2" /> Agende uma consulta
+              </Button>
+            </a>
           </div>
           <div className="flex flex-wrap items-center justify-center gap-6 mt-10 text-sm text-white/30">
             <span className="flex items-center gap-1.5"><Shield className="w-4 h-4" /> Sem fidelidade</span>
@@ -409,7 +421,7 @@ export default function Home() {
           <div className="flex gap-6 text-sm text-white/30">
             <Link href="/termos"><span className="hover:text-white/60 cursor-pointer transition-colors">Termos de Uso</span></Link>
             <Link href="/privacidade"><span className="hover:text-white/60 cursor-pointer transition-colors">Privacidade</span></Link>
-            <Link href="/login"><span className="hover:text-white/60 cursor-pointer transition-colors">Entrar</span></Link>
+            <a href="https://app.getsales4now.com/?url=%252Fagency_launchpad" target="_blank" rel="noopener noreferrer"><span className="hover:text-white/60 cursor-pointer transition-colors">Entrar</span></a>
           </div>
         </div>
       </footer>
